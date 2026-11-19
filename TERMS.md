@@ -56,9 +56,3 @@ These terms may be updated. The effective date at the top shows when they last c
 ## 10. Governing law
 
 These terms are governed by the laws of the State of California, United States.
-
-## 11. Questions
-
-For questions about a particular Social Hub server, contact its operator.
-
-To report a problem with the software or ask about these terms, open an issue at [github.com/The-Original-Reth/social-hub/issues](https://github.com/The-Original-Reth/social-hub/issues). Issues are public, so don't include personal information.
