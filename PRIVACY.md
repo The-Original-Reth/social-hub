@@ -73,9 +73,3 @@ Once access is removed, the stored tokens stop working and Social Hub can no lon
 ## 9. Changes
 
 This policy may be updated. The effective date at the top shows when it last changed, and this file's history on GitHub shows every change.
-
-## 10. Questions
-
-For questions about the information on a particular Social Hub server, contact its operator.
-
-To report a problem with the software or ask about this policy, open an issue at [github.com/The-Original-Reth/social-hub/issues](https://github.com/The-Original-Reth/social-hub/issues). Issues are public, so don't include personal information.
