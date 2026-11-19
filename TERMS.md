@@ -14,11 +14,7 @@ Each operator connects their own social media accounts using their own TikTok an
 
 Social Hub is published under the [GNU Affero General Public License, version 3](https://github.com/The-Original-Reth/social-hub/blob/main/LICENSE) (AGPL-3.0). That license governs copying, changing and running the software. In short, anyone may use and change Social Hub. If you change it and let others use your changed version, including over a network, you must make your source code available to them under the same license.
 
-## 3. Who may use a Social Hub server
-
-You may only use a Social Hub server with permission from its operator. Keep your login private, and tell the operator right away if you think someone else has used it.
-
-## 4. Third-party platforms
+## 3. Third-party platforms
 
 Social Hub connects to TikTok, Facebook and Instagram through their official developer interfaces. Anything posted through Social Hub is also governed by those platforms' own terms and policies:
 
@@ -28,7 +24,7 @@ Social Hub connects to TikTok, Facebook and Instagram through their official dev
 
 If those terms conflict with these, the platform's terms win for content on that platform. Operators must also follow each platform's developer terms for their own developer apps.
 
-## 5. Acceptable use
+## 4. Acceptable use
 
 When using Social Hub, you agree not to:
 
@@ -37,22 +33,22 @@ When using Social Hub, you agree not to:
 - share images or personal details of children without the consent of a parent or guardian
 - access accounts, data or systems you aren't authorized to use, or interfere with a Social Hub server's operation
 
-## 6. Content
+## 5. Content
 
 Whoever publishes content through Social Hub is responsible for it. Uploading a file to Social Hub doesn't change who owns it. Each platform may display, store and distribute published content under its own terms.
 
-## 7. No warranty
+## 6. No warranty
 
 Social Hub is provided "as is", without warranty of any kind, as set out in sections 15 and 16 of the AGPL-3.0. Scheduled posts may be delayed or fail because of network problems, platform outages, or changes to the platforms' rules or interfaces. To the extent the law allows, the maintainers are not liable for any loss from using Social Hub, including posts that fail, are delayed or are published by mistake.
 
-## 8. Ending access
+## 7. Ending access
 
 An operator may suspend or end anyone's access to their server at any time. Any connected social media account can be disconnected at any time, from Social Hub's Accounts page or from the platform's own settings.
 
-## 9. Changes
+## 8. Changes
 
 These terms may be updated. The effective date at the top shows when they last changed, and this file's history on GitHub shows every change.
 
-## 10. Governing law
+## 9. Governing law
 
 These terms are governed by the laws of the State of California, United States.
