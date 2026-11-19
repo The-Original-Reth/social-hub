@@ -2,75 +2,78 @@
   <title>Social Hub</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#6366f1"/>
-      <stop offset="1" stop-color="#4338ca"/>
+      <stop offset="0" stop-color="#6f9a62"/>
+      <stop offset="1" stop-color="#3f6a3e"/>
     </linearGradient>
-    <linearGradient id="hat" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#22c55e"/>
-      <stop offset="1" stop-color="#15803d"/>
-    </linearGradient>
+    <pattern id="stripes" width="64" height="64" patternUnits="userSpaceOnUse">
+      <rect width="64" height="64" fill="#f3e6d3"/>
+      <rect width="32" height="64" fill="#c64b3f"/>
+    </pattern>
     <clipPath id="tile"><rect width="1024" height="1024" rx="224"/></clipPath>
   </defs>
 
-  <g clip-path="url(#tile)">
-    <rect width="1024" height="1024" fill="url(#bg)"/>
-    <!-- soft glow behind the elf -->
-    <circle cx="500" cy="560" r="400" fill="#818cf8" opacity=".35"/>
+  <g clip-path="url(#tile)" stroke="#3a2a22" stroke-width="12" stroke-linejoin="round" stroke-linecap="round">
+    <rect width="1024" height="1024" fill="url(#bg)" stroke="none"/>
+    <circle cx="500" cy="540" r="390" fill="#8fbb7f" opacity=".35" stroke="none"/>
 
-    <!-- body / tunic -->
-    <path d="M250 1024 C250 790 360 700 500 700 C640 700 750 790 750 1024 Z" fill="#16a34a"/>
-    <path d="M410 708 L500 790 L590 708 Z" fill="#f59e0b"/>
-    <circle cx="500" cy="860" r="16" fill="#fde68a"/>
-    <circle cx="500" cy="935" r="16" fill="#fde68a"/>
+    <!-- striped shirt, suspenders, bow tie -->
+    <path d="M220 1040 C230 840 350 750 500 750 C650 750 770 840 780 1040 Z" fill="url(#stripes)"/>
+    <path d="M380 790 L370 1040 M620 790 L630 1040" stroke="#4a3426" stroke-width="40" fill="none"/>
+    <path d="M500 772 L440 742 L440 812 Z M500 772 L560 742 L560 812 Z" fill="#4f7a4a"/>
+    <circle cx="500" cy="777" r="20" fill="#3f6a3e"/>
 
-    <!-- ears -->
-    <path d="M318 470 L196 360 L330 560 Z" fill="#f2b48b"/>
-    <path d="M306 468 L226 398 L318 530 Z" fill="#e8977a"/>
-    <path d="M682 470 L804 360 L670 560 Z" fill="#f2b48b"/>
-    <path d="M694 468 L774 398 L682 530 Z" fill="#e8977a"/>
+    <!-- pointed ears -->
+    <path d="M364 438 C318 426 278 404 238 372 C262 438 304 500 360 546 Z" fill="#f2bf98"/>
+    <path d="M356 458 C326 448 300 432 276 412 C294 456 320 492 356 522 Z" fill="#e9a283" stroke="none"/>
+    <path d="M636 438 C682 426 722 404 762 372 C738 438 696 500 640 546 Z" fill="#f2bf98"/>
+    <path d="M644 458 C674 448 700 432 724 412 C706 456 680 492 644 522 Z" fill="#e9a283" stroke="none"/>
 
-    <!-- head -->
-    <circle cx="500" cy="500" r="190" fill="#f8c9a0"/>
+    <!-- face -->
+    <ellipse cx="500" cy="480" rx="152" ry="168" fill="#f6caa5"/>
 
-    <!-- face: looking down at the phone -->
-    <ellipse cx="438" cy="520" rx="22" ry="26" fill="#1f2937"/>
-    <ellipse cx="566" cy="520" rx="22" ry="26" fill="#1f2937"/>
-    <circle cx="446" cy="512" r="7" fill="#ffffff"/>
-    <circle cx="574" cy="512" r="7" fill="#ffffff"/>
-    <circle cx="400" cy="585" r="30" fill="#f59e9e" opacity=".75"/>
-    <circle cx="604" cy="585" r="30" fill="#f59e9e" opacity=".75"/>
-    <path d="M455 600 Q502 645 549 600" fill="none" stroke="#7c2d12" stroke-width="16" stroke-linecap="round"/>
 
-    <!-- hat -->
-    <path d="M296 430 C320 250 470 150 700 96 C640 190 690 310 706 430 Z" fill="url(#hat)"/>
-    <rect x="282" y="392" width="440" height="78" rx="39" fill="#dc2626"/>
-    <rect x="282" y="392" width="440" height="26" rx="13" fill="#ef4444"/>
-    <circle cx="712" cy="98" r="50" fill="#fde68a"/>
-    <circle cx="698" cy="84" r="16" fill="#fff7d6"/>
+    <!-- full beard and mustache -->
+    <path d="M350 440 C340 570 384 708 500 752 C616 708 660 570 650 440 C632 518 604 560 566 576 C536 560 464 560 434 576 C396 560 368 518 350 440 Z" fill="#6b452f"/>
+    <path d="M500 560 C468 540 424 548 404 578 C438 596 476 590 500 572 C524 590 562 596 596 578 C576 548 532 540 500 560 Z" fill="#5a3a28"/>
 
-    <!-- phone, held up in front -->
-    <g transform="rotate(-10 520 820)">
-      <rect x="400" y="640" width="250" height="400" rx="40" fill="#111827"/>
-      <rect x="418" y="676" width="214" height="340" rx="22" fill="#eef2ff"/>
-      <rect x="490" y="656" width="70" height="10" rx="5" fill="#374151"/>
-      <!-- post on screen: picture + caption lines -->
-      <rect x="436" y="696" width="178" height="130" rx="14" fill="#a5b4fc"/>
-      <path d="M436 800 L486 748 L522 786 L548 762 L614 820 L614 812 Q614 826 600 826 L450 826 Q436 826 436 812 Z" fill="#6366f1"/>
-      <circle cx="582" cy="730" r="14" fill="#fde68a"/>
-      <rect x="436" y="846" width="160" height="16" rx="8" fill="#c7d2fe"/>
-      <rect x="436" y="874" width="118" height="16" rx="8" fill="#c7d2fe"/>
-      <!-- post button -->
-      <rect x="436" y="928" width="178" height="58" rx="29" fill="#4f46e5"/>
-      <path d="M525 972 L525 946 M512 958 L525 945 L538 958" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- eyes, brows, nose, cheeks -->
+    <path d="M420 456 Q448 438 476 452 M524 452 Q552 438 580 456" fill="none" stroke="#5a3a28" stroke-width="16"/>
+    <circle cx="452" cy="492" r="12" fill="#2a1d17" stroke="none"/>
+    <circle cx="552" cy="492" r="12" fill="#2a1d17" stroke="none"/>
+    <circle cx="414" cy="530" r="24" fill="#ea9384" opacity=".75" stroke="none"/>
+    <circle cx="586" cy="530" r="24" fill="#ea9384" opacity=".75" stroke="none"/>
+    <circle cx="500" cy="530" r="24" fill="#eeb08e"/>
+
+    <!-- red hat drooping to the left, fluffy white brim, pom-pom -->
+    <path d="M454 182 C380 176 300 216 248 300 C300 276 362 270 424 282 Z" fill="#c64b3f"/>
+    <path d="M336 378 C336 246 420 164 532 164 C640 164 700 262 684 378 Z" fill="#c64b3f"/>
+    <path d="M318 352 Q340 330 362 348 Q384 326 410 346 Q434 324 460 344 Q486 322 512 344 Q538 322 564 344 Q590 324 614 346 Q640 326 662 348 Q686 330 704 352 Q720 388 700 418 Q676 438 652 420 Q628 440 602 422 Q578 442 552 424 Q526 444 500 426 Q474 444 448 424 Q422 442 398 422 Q372 440 348 420 Q324 438 304 412 Q296 380 318 352 Z" fill="#f6efe2"/>
+    <circle cx="242" cy="312" r="44" fill="#f6efe2"/>
+
+    <!-- hair: the quiff sweeping out from under the brim on the right -->
+    <path d="M628 362 C664 312 732 300 760 330 C736 330 716 340 706 356 C726 356 740 366 744 380 C712 374 682 384 662 404 Z" fill="#6b452f"/>
+
+    <!-- phone, held up on the right -->
+    <g transform="rotate(-10 660 860)">
+      <rect x="548" y="660" width="232" height="380" rx="38" fill="#2a1d17"/>
+      <rect x="566" y="694" width="196" height="326" rx="22" fill="#fbf6ec" stroke="none"/>
+      <rect x="630" y="674" width="66" height="9" rx="4" fill="#5b4a40" stroke="none"/>
+      <rect x="582" y="712" width="164" height="120" rx="14" fill="#a9cf98" stroke="none"/>
+      <path d="M582 808 L628 760 L662 796 L686 774 L746 828 L746 818 Q746 832 732 832 L596 832 Q582 832 582 818 Z" fill="#4f7a4a" stroke="none"/>
+      <circle cx="716" cy="742" r="13" fill="#f4d27a" stroke="none"/>
+      <rect x="582" y="850" width="146" height="15" rx="7" fill="#e3d6c1" stroke="none"/>
+      <rect x="582" y="876" width="106" height="15" rx="7" fill="#e3d6c1" stroke="none"/>
+      <rect x="582" y="930" width="164" height="56" rx="28" fill="#c64b3f" stroke="none"/>
+      <path d="M664 974 L664 948 M651 960 L664 947 L677 960" fill="none" stroke="#ffffff" stroke-width="9"/>
     </g>
 
     <!-- hands on the phone -->
-    <circle cx="398" cy="900" r="44" fill="#f8c9a0"/>
-    <circle cx="660" cy="880" r="44" fill="#f8c9a0"/>
+    <circle cx="560" cy="900" r="42" fill="#f6caa5"/>
+    <circle cx="790" cy="870" r="42" fill="#f6caa5"/>
 
     <!-- going out: hearts and a sparkle -->
-    <path d="M826 600 c-26-30-74-8-60 30 c10 26 60 56 60 56 s50-30 60-56 c14-38-34-60-60-30 z" fill="#f472b6"/>
-    <path d="M876 452 c-16-18-46-5-37 18 c6 16 37 34 37 34 s31-18 37-34 c9-23-21-36-37-18 z" fill="#fbcfe8"/>
-    <path d="M842 230 l12 34 l34 12 l-34 12 l-12 34 l-12-34 l-34-12 l34-12 z" fill="#fde68a"/>
+    <path d="M846 590 c-26-30-74-8-60 30 c10 26 60 56 60 56 s50-30 60-56 c14-38-34-60-60-30 z" fill="#e8766a"/>
+    <path d="M880 444 c-16-18-46-5-37 18 c6 16 37 34 37 34 s31-18 37-34 c9-23-21-36-37-18 z" fill="#f6c9c2" stroke-width="9"/>
+    <path d="M870 200 l12 34 l34 12 l-34 12 l-12 34 l-12-34 l-34-12 l34-12 z" fill="#f4d27a" stroke-width="9"/>
   </g>
 </svg>
