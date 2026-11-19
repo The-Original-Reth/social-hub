@@ -12,7 +12,7 @@ Each operator connects their own social media accounts using their own TikTok an
 
 ## 2. License
 
-Social Hub is published under the [GNU Affero General Public License, version 3](LICENSE) (AGPL-3.0). That license governs copying, changing and running the software. In short, anyone may use and change Social Hub. If you change it and let others use your changed version, including over a network, you must make your source code available to them under the same license.
+Social Hub is published under the [GNU Affero General Public License, version 3](https://github.com/The-Original-Reth/social-hub/blob/main/LICENSE) (AGPL-3.0). That license governs copying, changing and running the software. In short, anyone may use and change Social Hub. If you change it and let others use your changed version, including over a network, you must make your source code available to them under the same license.
 
 ## 3. Who may use a Social Hub server
 

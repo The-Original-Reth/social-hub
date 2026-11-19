@@ -1,0 +1,17 @@
+# GitHub Pages site for the app's Terms of Service and Privacy Policy.
+# The pages include TERMS.md and PRIVACY.md, so they always match the repository.
+title: Social Hub
+description: Self-hosted scheduling and posting for Facebook, Instagram and TikTok
+theme: jekyll-theme-primer
+exclude:
+  - src
+  - public
+  - scripts
+  - deploy
+  - node_modules
+  - data
+  - package.json
+  - package-lock.json
+  - Dockerfile
+  - docker-compose.yml
+  - README.md
