@@ -1,0 +1,27 @@
+services:
+  social-hub:
+    build: .
+    image: social-hub:latest
+    container_name: social-hub
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      DATA_DIR: /app/data
+    ports:
+      - "${HUB_PORT:-3000}:3000"
+    volumes:
+      - ./data:/app/data
+
+  # Cloudflare Tunnel: gives Social Hub a public https address without opening router ports.
+  # Turned on by COMPOSE_PROFILES=tunnel in .env (deploy/enable-tunnel.sh sets it up).
+  tunnel:
+    image: cloudflare/cloudflared:2026.11.1
+    container_name: social-hub-tunnel
+    profiles: ["tunnel"]
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:-}
+    depends_on:
+      - social-hub

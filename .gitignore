@@ -1,0 +1,10 @@
+node_modules/
+data/
+.env
+*.log
+deploy/*.tar.gz
+.claude/
+
+# Notes that are not part of the app
+dns-records.md
+*.cloudflare-import.txt
