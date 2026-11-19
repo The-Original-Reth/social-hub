@@ -11,6 +11,7 @@ import { validatePost } from './publisher.js';
 import { startScheduler, tick } from './scheduler.js';
 import * as settings from './settings.js';
 import * as meta from './meta.js';
+import { LEGAL_PAGES, legalPage } from './legal.js';
 
 settings.apply();
 
@@ -21,7 +22,7 @@ app.disable('x-powered-by');
 // Requests from the internet arrive through the Cloudflare Tunnel. They may only reach what the networks
 // themselves need: uploaded media (Instagram downloads it) and the login return pages (TikTok, Facebook).
 // Everything else, including the website, only works on the home network.
-const INTERNET_ALLOWED = /^\/(media\/[^/]+|healthz|auth\/(tiktok|meta)\/callback)$/;
+const INTERNET_ALLOWED = /^\/(media\/[^/]+|healthz|auth\/(tiktok|meta)\/callback|terms\.md|privacy\.md)$/;
 const publicHost = isLocalUrl(config.publicBaseUrl) ? null : new URL(config.publicBaseUrl).hostname;
 const fromInternet = (req) => Boolean(req.get('cf-ray') || req.get('cf-connecting-ip') || (publicHost && req.hostname === publicHost));
 app.use((req, res, next) => {
@@ -31,6 +32,9 @@ app.use((req, res, next) => {
 
 // Health check for Docker; no auth so the container healthcheck can reach it.
 app.get('/healthz', (_req, res) => res.json({ ok: true }));
+
+// Terms of Service and Privacy Policy: public, no password, for TikTok and Meta app review.
+app.get(Object.keys(LEGAL_PAGES), legalPage);
 
 // Uploaded media must be public: Instagram's servers download it from PUBLIC_BASE_URL.
 // File names are random UUIDs, so they cannot be guessed.

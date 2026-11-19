@@ -9,7 +9,7 @@ ARCHIVE=deploy/social-hub.tar.gz
 
 echo ">> Packing app"
 tar --owner=0 --group=0 -czf "$ARCHIVE" --exclude=node_modules --exclude=data --exclude=.env --exclude='deploy/*.tar.gz' \
-  package.json package-lock.json Dockerfile docker-compose.yml .dockerignore .env.example src public scripts deploy/install-in-ct.sh deploy/enable-tunnel.sh README.md
+  package.json package-lock.json Dockerfile docker-compose.yml .dockerignore .env.example src public scripts deploy/install-in-ct.sh deploy/enable-tunnel.sh README.md TERMS.md PRIVACY.md LICENSE
 
 echo ">> Copying to $TARGET"
 scp -q "$ARCHIVE" deploy/install-in-ct.sh "$TARGET:/tmp/"

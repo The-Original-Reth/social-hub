@@ -35,6 +35,8 @@ This information is used only to connect the operator's accounts and to publish 
 
 Social Hub doesn't sell, rent or share information. It sends information only to the platform a post is published to. Social Hub has no analytics, tracking or "phone home" features: nothing is sent to the maintainers or to anyone else.
 
+Besides TikTok and Meta, the only other site Social Hub contacts is GitHub, to fetch the public text of these Terms of Service and this Privacy Policy when someone opens them on a Social Hub server. That request carries no information about users, accounts or posts.
+
 To publish to Instagram, Social Hub makes the photo or video available at a hard-to-guess web address on the operator's server, because Instagram downloads it from there.
 
 ## 5. Storage and security
